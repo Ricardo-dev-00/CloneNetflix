@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import MovieList from '@/components/MovieList';
 import { Movie, TV } from '@/types';
 import movieService from '@/services/movieService';
@@ -75,12 +76,12 @@ export default function Home() {
                   {bannerMovie?.overview}
                 </p>
                 <div className="flex gap-4">
-                  <button className="btn-primary">
+                  <Link href={`/movie/${bannerMovie?.id}`} className="btn-primary">
                     ▶ Assistir
-                  </button>
-                  <button className="btn-secondary">
+                  </Link>
+                  <Link href={`/movie/${bannerMovie?.id}`} className="btn-secondary">
                     ℹ Mais Informações
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

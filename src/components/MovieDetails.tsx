@@ -210,6 +210,61 @@ export default function MovieDetails({ movieId }: MovieDetailsProps) {
                 </div>
               </div>
             )}
+
+            {/* Where to Watch */}
+            {movie.watch_providers?.results?.BR && (
+              <div>
+                <h3 className="text-xl font-bold mb-3">Onde Assistir no Brasil</h3>
+                
+                {movie.watch_providers.results.BR.flatrate && (
+                  <div className="mb-4">
+                    <h4 className="text-sm text-gray-400 mb-2">Streaming</h4>
+                    <div className="flex flex-wrap gap-3">
+                      {movie.watch_providers.results.BR.flatrate.map((provider) => (
+                        <div
+                          key={provider.provider_id}
+                          className="bg-gray-800 rounded-lg px-4 py-2 text-sm font-semibold"
+                        >
+                          {provider.provider_name}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {movie.watch_providers.results.BR.rent && (
+                  <div className="mb-4">
+                    <h4 className="text-sm text-gray-400 mb-2">Aluguel</h4>
+                    <div className="flex flex-wrap gap-3">
+                      {movie.watch_providers.results.BR.rent.map((provider) => (
+                        <div
+                          key={provider.provider_id}
+                          className="bg-gray-800 rounded-lg px-4 py-2 text-sm font-semibold"
+                        >
+                          {provider.provider_name}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {movie.watch_providers.results.BR.buy && (
+                  <div className="mb-4">
+                    <h4 className="text-sm text-gray-400 mb-2">Compra</h4>
+                    <div className="flex flex-wrap gap-3">
+                      {movie.watch_providers.results.BR.buy.map((provider) => (
+                        <div
+                          key={provider.provider_id}
+                          className="bg-gray-800 rounded-lg px-4 py-2 text-sm font-semibold"
+                        >
+                          {provider.provider_name}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
