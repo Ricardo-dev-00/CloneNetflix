@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = (await params).id;
   
   // Fetch movie details on the server side
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000/api';
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || '/api';
   
   try {
     const response = await fetch(`${baseUrl}/movies/${id}`, {
