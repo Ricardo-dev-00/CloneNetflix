@@ -8,12 +8,8 @@ const nextConfig = {
         hostname: "image.tmdb.org",
       },
     ],
-    formats: ['image/avif', 'image/webp'],
   },
   swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  productionBrowserSourceMaps: false,
 };
 
 module.exports = nextConfig;

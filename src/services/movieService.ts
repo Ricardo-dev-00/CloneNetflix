@@ -2,11 +2,8 @@ import axios from 'axios';
 import { APIResponse, Movie, TV, MovieDetails, TVDetails, Genre } from '@/types';
 
 const apiClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || '/api',
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000/api',
   timeout: 10000,
-  headers: {
-    'Accept-Encoding': 'gzip, deflate',
-  },
 });
 
 export const movieService = {

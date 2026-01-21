@@ -8,211 +8,46 @@ NetflixClone é um projeto full-stack que demonstra boas práticas de desenvolvi
 
 - ✅ **Arquitetura Escalável**: Estrutura organizada e modular
 - ✅ **SEO Otimizado**: Metadata dinâmica e Server-Side Rendering
-- ✅ **Performance**: Imagens otimizadas (WebP/AVIF), lazy loading e code splitting
+- ✅ **Performance**: Imagens otimizadas, lazy loading e code splitting
 - ✅ **Segurança**: API key nunca exposta no frontend
-- ✅ **Tipagem Forte**: 100% TypeScript com modo strict
+- ✅ **Tipagem Forte**: 100% TypeScript
 - ✅ **UX Fluida**: Animações, loading states e design responsivo
-- ✅ **Deploy Pronto**: Configurado para Vercel com CI/CD automático
-- ✅ **Onde Assistir**: Integração com providers de streaming (Netflix, Disney+, Prime Video, etc.)
+- ✅ **Deploy Pronto**: Configurado para Vercel
 
-## 🚀 Quick Start
+## 🚀 Tecnologias
 
-### Pré-requisitos
-- Node.js ≥ 18.0.0
-- npm ou yarn
-- Chave de API do TMDB (gratuita)
+### Frontend
+- **Next.js 14** - Framework React com App Router
+- **React 18** - Biblioteca UI
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Styling utility-first
+- **Axios** - Cliente HTTP
 
-### Instalação
+### API & Data
+- **The Movie Database (TMDB)** - API de filmes e séries
+- **Next.js API Routes** - Backend seguro
+- **Server Actions** - Processamento no servidor
 
-```bash
-# Clonar repositório
-git clone https://github.com/seu-usuario/CloneNetflix.git
-cd CloneNetflix
-
-# Instalar dependências
-npm install
-
-# Configurar variáveis de ambiente
-cp .env.local.example .env.local
-# Edite .env.local e adicione sua chave TMDB_API_KEY
-```
-
-### Desenvolvimento
-
-```bash
-npm run dev
-# Acesse http://localhost:3000
-```
-
-### Build de Produção
-
-```bash
-npm run build
-npm start
-```
-
-## 🛠 Tecnologias
-
-| Camada | Tecnologia |
-|--------|-----------|
-| **Framework** | Next.js 14 (App Router) |
-| **Linguagem** | TypeScript 5.3 |
-| **UI** | React 18 |
-| **Styling** | Tailwind CSS 3.3 |
-| **HTTP Client** | Axios 1.6 |
-| **API Data** | TMDB (The Movie Database) |
-| **Deploy** | Vercel |
+### Deploy
+- **Vercel** - Hospedagem otimizada para Next.js
 
 ## 📂 Estrutura do Projeto
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx              # Layout raiz com Header/Footer
-│   ├── page.tsx                # Home com banner e listas
-│   ├── catalogo/page.tsx       # Catálogo com filtros
-│   ├── movie/[id]/page.tsx     # Detalhes do filme
-│   ├── tv/[id]/page.tsx        # Detalhes da série
-│   └── api/                    # Routes de backend
-│       ├── movies/             # Endpoints de filmes
-│       ├── tv/                 # Endpoints de séries
-│       ├── search/             # Busca
-│       ├── genres/             # Gêneros
-│       └── discover/           # Descoberta
-├── components/
-│   ├── Header.tsx              # Navegação principal
-│   ├── Footer.tsx              # Rodapé
-│   ├── MovieCard.tsx           # Card de filme/série
-│   ├── MovieList.tsx           # Lista de conteúdo
-│   ├── MovieDetails.tsx        # Detalhes completos
-│   ├── TVDetails.tsx           # Detalhes de série
-│   └── Skeletons.tsx           # Loading states
-├── services/
-│   └── movieService.ts         # Cliente HTTP
-├── lib/
-│   └── tmdb.ts                 # Configuração TMDB
-├── types/
-│   └── index.ts                # Types TypeScript
-└── styles/
-    └── globals.css             # Estilos globais
-```
-
-## 🔒 Segurança
-
-- **API Key Protegida**: Chave TMDB nunca é exposta ao cliente
-- **Server-Side Rendering**: Dados sensíveis processados no servidor
-- **.env.local**: Arquivo de ambiente ignora no git
-- **CORS Seguro**: Apenas domínios autorizados
-- **HTTPS**: Suportado em produção
-
-## 📊 Funcionalidades
-
-### Página Inicial
-- Banner destaque com filme em tendência
-- 4 listas de conteúdo (Em Alta, Populares, Próximos, Séries)
-- Loading skeletons para melhor UX
-
-### Catálogo
-- Filtro por tipo (Filmes/Séries)
-- Filtro por gênero
-- Busca por titulo
-- Paginação
-- Grid responsivo
-
-### Detalhes
-- Backdrop com gradient overlay
-- Poster e metadata completa
-- Orçamento, receita e produtoras
-- Sinopse, idiomas e países
-- **Onde Assistir** no Brasil (Streaming, Aluguel, Compra)
-- Conteúdo similar
-- Galeria de vídeos/trailers
-
-## 🚀 Deploy na Vercel
-
-### Passos
-
-1. **Push para GitHub**
-   ```bash
-   git push origin main
-   ```
-
-2. **Importar na Vercel**
-   - Acesse [vercel.com](https://vercel.com)
-   - Conecte com GitHub
-   - Selecione `CloneNetflix`
-
-3. **Configurar Variáveis**
-   - Settings → Environment Variables
-   - Adicione: `TMDB_API_KEY=sua_chave_aqui`
-   - Marque: Production, Preview, Development
-
-4. **Deploy Automático**
-   - Todo push para `main` fará deploy automático
-   - Build e testes executam automaticamente
-
-### URL Pública
-```
-https://seu-usuario-netflix-clone.vercel.app
-```
-
-## 📈 Performance
-
-### Otimizações Implementadas
-
-- **Image Optimization**: Compressão automática (WebP/AVIF)
-- **Code Splitting**: Divisão automática de chunks
-- **Tree Shaking**: Remoção de código não utilizado
-- **Minification**: SWC minification em produção
-- **Caching**: Headers de cache HTTP otimizados
-- **Source Maps**: Desabilitados em produção
-
-### Métricas
-- First Load JS: ~124 kB (otimizado)
-- Route Size: 2-3 KB por página
-- API Routes: 0 B (server-only)
-
-## 📚 Documentação Adicional
-
-- [GETTING_STARTED.md](GETTING_STARTED.md) - Guia detalhado de instalação
-- [DEPLOY_VERCEL.md](DEPLOY_VERCEL.md) - Deploy passo a passo
-- [API_DOCUMENTATION.md](API_DOCUMENTATION.md) - Documentação das rotas
-- [BEST_PRACTICES.md](BEST_PRACTICES.md) - Padrões de código
-- [PRE_DEPLOYMENT_CHECKLIST.md](PRE_DEPLOYMENT_CHECKLIST.md) - Checklist pré-deploy
-
-## 🤝 Contribuir
-
-Contribuições são bem-vindas! Por favor:
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob licença MIT. Veja [LICENSE](LICENSE) para mais detalhes.
-
-## 👨‍💻 Autor
-
-**Ricardo Dev**
-
-- GitHub: [@Ricardo-dev-00](https://github.com/Ricardo-dev-00)
-- LinkedIn: [Ricardo Dev](https://linkedin.com/in/ricardo-dev)
-
-## 🙏 Agradecimentos
-
-- [TMDB API](https://www.themoviedb.org/settings/api) pelos dados
-- [Next.js](https://nextjs.org/) pela framework
-- [Tailwind CSS](https://tailwindcss.com/) pelo styling
-- [Vercel](https://vercel.com/) pelo hosting
-
----
-
-**Status**: ✅ Completo e pronto para produção
-
-**Última atualização**: Janeiro de 2026
+│   ├── (home)/
+│   │   └── page.tsx          # Página principal
+│   ├── catalogo/
+│   │   └── page.tsx          # Catálogo com filtros
+│   ├── movie/[id]/
+│   │   └── page.tsx          # Detalhes do filme
+│   ├── tv/[id]/
+│   │   └── page.tsx          # Detalhes da série
+│   ├── api/
+│   │   ├── movies/           # Endpoints de filmes
+│   │   ├── tv/               # Endpoints de séries
+│   │   ├── search/           # Endpoints de busca
 │   │   ├── genres/           # Endpoints de gêneros
 │   │   └── discover/         # Endpoints de descoberta
 │   ├── layout.tsx            # Layout raiz

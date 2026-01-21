@@ -1,9 +1,7 @@
 {
   "name": "netflix-clone",
   "version": "1.0.0",
-  "description": "Uma aplicação web profissional inspirada na Netflix, construída com Next.js 14, TypeScript e Tailwind CSS. Demonstra boas práticas de desenvolvimento, SEO otimizado, segurança e performance.",
-  "keywords": ["netflix", "clone", "next.js", "typescript", "react", "tailwind", "tmdb"],
-  "author": "Ricardo Dev",
+  "description": "A professional Netflix-inspired web application built with Next.js, TypeScript, and Tailwind CSS",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -26,8 +24,5 @@
     "autoprefixer": "^10.4.0",
     "eslint": "^8.0.0",
     "eslint-config-next": "^14.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   }
 }
