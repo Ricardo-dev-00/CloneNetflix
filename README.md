@@ -259,9 +259,9 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 Desenvolvido com ❤️ por Ricardo
 
-- 🔗 [LinkedIn](#)
-- 🐙 [GitHub](#)
-- 📧 Email: seu.email@example.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/ricardo-vieira-dev/)
+- 🐙 [GitHub](https://github.com/Ricardo-dev-00)
+- 📧 Email: ricardo.dev.of@gmail.com
 
 ## ⭐ Suporte
 
